@@ -85,15 +85,16 @@
 
 [项目地址](https://github.com/dukeimp/weburl)
 ---
-# 🚀 部署方式
+# 🚀 后端部署方式
 
 ## 创建 Worker
 
 在 Cloudflare Dashboard 创建 Worker，并部署：
 
 ```
-worker.js
+worker.js    替换项目中的源码
 ```
+<img width="1003" height="967" alt="image" src="https://github.com/user-attachments/assets/5b4b83d2-6efd-4c42-97c5-f03b69f3ecfc" />
 
 ---
 
@@ -110,6 +111,7 @@ DB.sql
 ---
 
 ## 配置绑定
+<img width="1259" height="840" alt="image" src="https://github.com/user-attachments/assets/b1fd9747-94e0-4de7-b0bb-b439b24b954e" />
 
 Worker 设置：
 
@@ -123,6 +125,7 @@ DB
 ---
 
 ## 环境变量
+<img width="968" height="279" alt="image" src="https://github.com/user-attachments/assets/d2b6ce22-beff-4894-8162-fd22588d43f7" />
 
 配置：
 
@@ -134,20 +137,30 @@ JWT_SECRET
 ## 前端
 
 - HTML5
-
 - CSS3
-
 - JavaScript
-
   特点：
-
 - 无框架依赖
-
 - 加载速度快
-
 - 易于二次开发
 
 ---
+[项目地址](https://github.com/dukeimp/weburl)
+---
+# 🚀 前端部署方式
+
+## 创建 Worker
+
+在 Cloudflare Dashboard 创建 Worker，并部署：
+
+选择  Upload your static files
+
+修改static/api.js  的后端接口地址  https://you-doman.worker.dv/api 
+<img width="645" height="256" alt="image" src="https://github.com/user-attachments/assets/0baa9402-d831-4b4c-a521-089ecbcf47ed" />
+
+上传并部署  拖入  项目目录  static中的所有文件夹
+<img width="823" height="587" alt="image" src="https://github.com/user-attachments/assets/caac34ec-f183-4b15-898a-d16e075ca36e" />
+
 
 # 📁 项目结构
 
