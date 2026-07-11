@@ -119,8 +119,43 @@ Worker 设置：
 D1 Database Bindings
 
 变量:
+<img width="1331" height="789" alt="image" src="https://github.com/user-attachments/assets/bf5cf5e4-c3b3-4d55-b5b9-36451f080458" />
+
 DB
 ```
+-- 创建分组表
+CREATE TABLE Groups (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    order_num INTEGER DEFAULT 0,
+    is_private BOOLEAN DEFAULT FALSE,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 创建链接表
+CREATE TABLE Links (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    url TEXT NOT NULL,
+    logo TEXT,
+    description TEXT,
+    group_id INTEGER,
+    order_num INTEGER DEFAULT 0,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (group_id) REFERENCES Groups(id) ON DELETE CASCADE
+); 
+
+-- 背景设置表
+CREATE TABLE BackgroundSettings (
+    id INTEGER PRIMARY KEY CHECK (id = 1),
+    image_data TEXT,
+    image_source TEXT,
+    mode TEXT DEFAULT 'cover',
+    opacity INTEGER DEFAULT 50,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
 
 ---
 
@@ -150,14 +185,12 @@ JWT_SECRET
 # 🚀 前端部署方式
 
 ## 创建 Worker
+修改static/api.js  的后端接口地址  https://you-doman.worker.dv/api 
+<img width="645" height="256" alt="image" src="https://github.com/user-attachments/assets/0baa9402-d831-4b4c-a521-089ecbcf47ed" />
 
 在 Cloudflare Dashboard 创建 Worker，并部署：
 
 选择  Upload your static files
-
-修改static/api.js  的后端接口地址  https://you-doman.worker.dv/api 
-<img width="645" height="256" alt="image" src="https://github.com/user-attachments/assets/0baa9402-d831-4b4c-a521-089ecbcf47ed" />
-
 上传并部署  拖入  项目目录  static中的所有文件夹
 <img width="823" height="587" alt="image" src="https://github.com/user-attachments/assets/caac34ec-f183-4b15-898a-d16e075ca36e" />
 
