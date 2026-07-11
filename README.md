@@ -99,30 +99,13 @@ worker.js    替换项目中的源码
 ---
 
 ## 创建 D1 数据库
+<img width="1331" height="789" alt="image" src="https://github.com/user-attachments/assets/bf5cf5e4-c3b3-4d55-b5b9-36451f080458" />
 
 执行：
 
 ```
 DB.sql
-```
 
-完成初始化。
-
----
-
-## 配置绑定
-<img width="1259" height="840" alt="image" src="https://github.com/user-attachments/assets/b1fd9747-94e0-4de7-b0bb-b439b24b954e" />
-
-Worker 设置：
-
-```
-D1 Database Bindings
-
-变量:
-<img width="1331" height="789" alt="image" src="https://github.com/user-attachments/assets/bf5cf5e4-c3b3-4d55-b5b9-36451f080458" />
-
-DB
-```
 -- 创建分组表
 CREATE TABLE Groups (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -157,6 +140,24 @@ CREATE TABLE BackgroundSettings (
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+```
+
+完成初始化。
+
+---
+
+## 配置绑定
+<img width="1259" height="840" alt="image" src="https://github.com/user-attachments/assets/b1fd9747-94e0-4de7-b0bb-b439b24b954e" />
+
+Worker 设置：
+
+```
+D1 Database Bindings
+
+变量:
+
+DB
+```
 ---
 
 ## 环境变量
