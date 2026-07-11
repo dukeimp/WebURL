@@ -101,7 +101,8 @@
 - 易于二次开发
 
 ---
-
+[项目地址](https://github.com/dukeimp/weburl)
+---
 # 🚀 部署方式
 
 ## 创建 Worker
@@ -173,7 +174,7 @@ MIT License
 
 # 👨‍💻 作者
 
-dukeimp https://github.com/dukeimp/weburl
+[dukeimp](https://github.com/dukeimp)
 
 ---
 
